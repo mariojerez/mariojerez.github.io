@@ -1,0 +1,4 @@
+id,institution,degree,location,start_date,end_date,gpa,notes
+1,University of Minnesota,Doctor of Philosophy in Computer Science,"Minneapolis, MN",2024-09,present,3.95/4.00,"Advised by <a href='https://nextgenai.umn.edu/team' target='_blank'>Dr. Maria Gini</a>. Researching swarm intelligence and multi-robot systems."
+2,Sarah Lawrence College,Bachelor of Arts,"Bronxville, NY",2018-09,2021-05,3.96/4.00,"Coursework: Bio-Inspired AI, Multivariable Calculus, Probability, Risk Analysis, Optimization"
+3,Keystone Academy,International Baccalaureate Diploma Programme,"Beijing, China",2016-08,2018-05,,

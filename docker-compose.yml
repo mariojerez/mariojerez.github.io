@@ -1,0 +1,15 @@
+services:
+  website:
+    build: .
+    container_name: personal-site-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - personal-site-node-modules:/app/node_modules
+      - ${HOME}/.ssh:/root/.ssh:ro
+    stdin_open: true
+    tty: true
+
+volumes:
+  personal-site-node-modules:
