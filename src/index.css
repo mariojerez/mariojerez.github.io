@@ -27,7 +27,7 @@
    Reset
    ============================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 20px; }
+html { scroll-behavior: smooth; font-size: 16px; }
 body {
   background: var(--bg);
   color: var(--text);
@@ -262,6 +262,22 @@ section + section {
   line-height: 1.08;
   color: var(--text);
   margin-bottom: 14px;
+}
+
+.hero-pronouns {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.hero-pronouns a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.hero-pronouns a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .hero-subtitle {
@@ -914,3 +930,21 @@ footer {
   line-height: 1.75;
   font-style: italic;
 }
+.cw-evaluations {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 14px;
+}
+.cw-eval-block { display: flex; flex-direction: column; gap: 0; }
+.cw-eval-label {
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+  opacity: 0.85;
+}
+.cw-eval-block .cw-evaluation { margin-top: 0; }
