@@ -26,6 +26,23 @@ function CourseCard({ entry, showGrades }) {
           <div className="cw-title">{entry.course_name}</div>
           <div className="cw-sub">
             {entry.course_number ? `${entry.course_number} · ` : ''}{entry.program}
+            {entry.professor_name && (
+              <span className="cw-professor">
+                {' · '}
+                {entry.professor_url ? (
+                  <a
+                    href={entry.professor_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={e => e.stopPropagation()}
+                  >
+                    {entry.professor_name}
+                  </a>
+                ) : (
+                  entry.professor_name
+                )}
+              </span>
+            )}
           </div>
           <div className="cw-badges">
             <span className="cw-term">{entry.term}</span>
