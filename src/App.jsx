@@ -11,6 +11,7 @@ import EducationSection from './components/sections/EducationSection.jsx';
 import CourseworkSection from './components/sections/CourseworkSection.jsx';
 import AwardsSection from './components/sections/AwardsSection.jsx';
 import SkillsSection from './components/sections/SkillsSection.jsx';
+import OpenSourceSection from './components/sections/OpenSourceSection.jsx';
 import ContactSection from './components/sections/ContactSection.jsx';
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
         <SkillsSection />
         <CourseworkSection />
         <AwardsSection />
+        <OpenSourceSection />
         <ContactSection />
       </main>
       <Footer />

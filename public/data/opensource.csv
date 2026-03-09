@@ -1,0 +1,2 @@
+id,title,project,description,url,year,highlights
+1,Probability Distribution Sampling for Gymnasium Spaces,Farama-Foundation/Gymnasium,"Proposed and helped implement a new feature in the Gymnasium reinforcement learning library that allows users to specify a custom probability distribution when sampling from an observation or action space.",https://github.com/Farama-Foundation/Gymnasium/issues/1255,2024,Opened GitHub issue proposing the feature|Participated in design discussions|Contributed to implementation in the Gymnasium codebase|Feature merged into the official library

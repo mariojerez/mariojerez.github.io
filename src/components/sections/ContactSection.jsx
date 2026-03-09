@@ -6,8 +6,8 @@ export default function ContactSection() {
           <h2 className="section-title">Contact</h2>
         </div>
         <p className="contact-text">
-          I am always open to discussing research collaborations, PhD opportunities,
-          or anything related to swarm intelligence and multi-robot systems.
+          I am always open to discussing research collaborations, job opportunities,
+          or anything related to swarm intelligence and multi-agent systems.
           Feel free to reach out!
         </p>
         <div className="contact-links">
