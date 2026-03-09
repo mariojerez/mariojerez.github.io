@@ -29,6 +29,7 @@ export default function SwarmBackground() {
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * SPEED * 2,
         vy: (Math.random() - 0.5) * SPEED * 2,
+        pink: Math.random() < 0.25,
       }));
     }
 
@@ -93,8 +94,11 @@ export default function SwarmBackground() {
           const d  = Math.sqrt(dx * dx + dy * dy);
           if (d < DIST) {
             const alpha = (1 - d / DIST) * 0.13;
+            const bothPink = list[i].pink && list[j].pink;
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(136,189,242,${alpha})`;
+            ctx.strokeStyle = bothPink
+              ? `rgba(240,160,196,${alpha})`
+              : `rgba(136,189,242,${alpha})`;
             ctx.lineWidth = 0.6;
             ctx.moveTo(list[i].x, list[i].y);
             ctx.lineTo(list[j].x, list[j].y);
@@ -107,7 +111,7 @@ export default function SwarmBackground() {
       for (const a of list) {
         ctx.beginPath();
         ctx.arc(a.x, a.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(136,189,242,0.22)';
+        ctx.fillStyle = a.pink ? 'rgba(240,160,196,0.22)' : 'rgba(136,189,242,0.22)';
         ctx.fill();
       }
 

@@ -7,7 +7,7 @@ function highlightAuthor(authors, name = 'M. Jerez') {
     const isMe = trimmed === name;
     return (
       <span key={i}>
-        {isMe ? <strong>{trimmed}</strong> : trimmed}
+        {isMe ? <strong style={{ color: 'var(--pink)', fontWeight: 700 }}>{trimmed}</strong> : trimmed}
         {i < arr.length - 1 ? ', ' : ''}
       </span>
     );
