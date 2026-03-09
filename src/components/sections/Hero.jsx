@@ -25,20 +25,6 @@ export default function Hero() {
             agents cooperate in a decentralized manner to accomplish complex tasks.
           </p>
 
-          <div className="hero-actions">
-            <a
-              href="/Mario_Jerez_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              View CV
-            </a>
-            <a href="#contact" className="btn btn-outline">
-              Get in Touch
-            </a>
-          </div>
-
           <div className="hero-social">
             <a href="https://github.com/mariojerez" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
