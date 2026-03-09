@@ -1,14 +1,14 @@
 import { useEffect, useRef } from 'react';
 
 const ORBITERS = [
-  { radius: 133, speed: 0.0008, phase: 0,    size: 2.5 },
-  { radius: 141, speed: 0.0012, phase: 1.2,  size: 2.0 },
-  { radius: 128, speed: 0.0006, phase: 2.5,  size: 2.2 },
-  { radius: 138, speed: 0.0015, phase: 0.8,  size: 1.8 },
-  { radius: 145, speed: 0.0010, phase: 3.8,  size: 2.5 },
-  { radius: 130, speed: 0.0007, phase: 4.7,  size: 2.0 },
-  { radius: 142, speed: 0.0013, phase: 2.1,  size: 1.8 },
-  { radius: 136, speed: 0.0009, phase: 5.2,  size: 2.3 },
+  { radius: 133, speed: 0.0008, phase: 0,    size: 2.5, pink: false },
+  { radius: 141, speed: 0.0012, phase: 1.2,  size: 2.0, pink: true  },
+  { radius: 128, speed: 0.0006, phase: 2.5,  size: 2.2, pink: false },
+  { radius: 138, speed: 0.0015, phase: 0.8,  size: 1.8, pink: false },
+  { radius: 145, speed: 0.0010, phase: 3.8,  size: 2.5, pink: true  },
+  { radius: 130, speed: 0.0007, phase: 4.7,  size: 2.0, pink: false },
+  { radius: 142, speed: 0.0013, phase: 2.1,  size: 1.8, pink: false },
+  { radius: 136, speed: 0.0009, phase: 5.2,  size: 2.3, pink: true  },
 ];
 
 export default function AvatarOrbit() {
@@ -40,8 +40,8 @@ export default function AvatarOrbit() {
 
         // Glow
         const grd = ctx.createRadialGradient(x, y, 0, x, y, orb.size * 3.5);
-        grd.addColorStop(0, 'rgba(136,189,242,0.55)');
-        grd.addColorStop(1, 'rgba(136,189,242,0)');
+        grd.addColorStop(0, orb.pink ? 'rgba(240,160,196,0.55)' : 'rgba(136,189,242,0.55)');
+        grd.addColorStop(1, orb.pink ? 'rgba(240,160,196,0)' : 'rgba(136,189,242,0)');
         ctx.beginPath();
         ctx.arc(x, y, orb.size * 3.5, 0, Math.PI * 2);
         ctx.fillStyle = grd;
@@ -50,7 +50,7 @@ export default function AvatarOrbit() {
         // Dot
         ctx.beginPath();
         ctx.arc(x, y, orb.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(189,221,252,0.8)';
+        ctx.fillStyle = orb.pink ? 'rgba(240,160,196,0.9)' : 'rgba(189,221,252,0.8)';
         ctx.fill();
       }
 

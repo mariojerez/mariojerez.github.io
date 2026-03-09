@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <a href="#hero" className="navbar-logo">
-        Mario <span>Jerez</span>
+        <span style={{ color: 'var(--pink)' }}>Mario</span> <span>Jerez</span>
       </a>
       <div className="navbar-links">
         {NAV_LINKS.map(({ label, href }) => (
