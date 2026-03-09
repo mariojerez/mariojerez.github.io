@@ -13,7 +13,8 @@ function isImageUrl(url) {
 
 function CourseCard({ entry, showGrades }) {
   const [open, setOpen] = useState(false);
-  const hasDetails = entry.project_desc || entry.project_media || entry.student_evaluation;
+  const hasTwoEvals = entry.student_evaluation_s1 && entry.student_evaluation;
+  const hasDetails = entry.project_desc || entry.project_media || entry.student_evaluation || entry.student_evaluation_s1;
 
   return (
     <div
@@ -81,9 +82,22 @@ function CourseCard({ entry, showGrades }) {
               )}
             </div>
           )}
-          {entry.student_evaluation && (
+          {hasTwoEvals ? (
+            <div className="cw-evaluations">
+              <div className="cw-eval-block">
+                <div className="cw-eval-label">Semester 1 — {entry.term_s1}</div>
+                <div className="cw-evaluation">{entry.student_evaluation_s1}</div>
+              </div>
+              <div className="cw-eval-block">
+                <div className="cw-eval-label">Semester 2 — {entry.term}</div>
+                <div className="cw-evaluation">{entry.student_evaluation}</div>
+              </div>
+            </div>
+          ) : entry.student_evaluation ? (
             <div className="cw-evaluation">{entry.student_evaluation}</div>
-          )}
+          ) : entry.student_evaluation_s1 ? (
+            <div className="cw-evaluation">{entry.student_evaluation_s1}</div>
+          ) : null}
         </div>
       )}
     </div>

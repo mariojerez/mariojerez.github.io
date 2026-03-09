@@ -11,6 +11,10 @@ export default function Hero() {
 
           <h1 className="hero-name">Mario Jerez</h1>
 
+          <p className="hero-pronouns">
+            <a href="https://pronouns.org/" target="_blank" rel="noopener noreferrer">they/them</a>
+          </p>
+
           <p className="hero-subtitle">
             Computer Science · University of Minnesota
           </p>
