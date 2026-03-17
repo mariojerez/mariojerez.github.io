@@ -1,6 +1,5 @@
 **/.DS_Store
 /old_site
-CLAUDE.md
-DEV_INSTRUCTIONS.md
 node_modules/
 dist/
+.claude/
